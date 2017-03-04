@@ -11,14 +11,14 @@ def dfs(vertex, graph, used=set()):
     used.add(vertex)
     for v in range(len(graph)):
         if graph[vertex][v] == 1 and v not in used:
-            print(v)
-            dfs(i, graph)
-            print(v)
+            #print(v)
+            dfs(v, graph)
+            #print(v)
 			
-def print_graph(A):
-    for line in A:
-        print(*line)
-    print()			
+#def print_graph(A):
+#    for line in A:
+#        print(*line)
+#    print()			
                  
 def reverse_graph(graph):
     graph_t = list(zip(*graph))
@@ -29,6 +29,6 @@ def reverse_graph(graph):
 graph = reading_the_graph_as_adjacent_matrix()
 #print_graph(graph)
 #dfs(0, graph)
-graph1 = reverse_graph(graph)
-print_graph(graph1)
-print_graph(graph)
+#graph1 = reverse_graph(graph)
+#print_graph(graph1)
+#print_graph(graph)
