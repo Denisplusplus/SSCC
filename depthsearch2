@@ -14,7 +14,7 @@ def dfs(vertex, graph, used=set()):
     for v in range(len(graph)):
         if graph[vertex][v] == 1 and v not in used:
             print(v)
-            dfs(i, graph)
+            dfs(v, graph)
             print(v)
                  
                 
