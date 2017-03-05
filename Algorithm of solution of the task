@@ -1,6 +1,7 @@
 
-Let's assume the algoritm for finding strongly connected components.
-We will use well-known algorithm Kosaraju.|
+
+###ALGORITHM BY DISCRETE MATH
+We will use well-known [Kosaraju's_algorithm](https://en.wikipedia.org/wiki/Kosaraju's_algorithm)
 
 Here are the steps of alghoritm:
 1.
