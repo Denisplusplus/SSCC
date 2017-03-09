@@ -14,20 +14,20 @@
  * Output components from step (1.4)- strong-connected components  
 
 ##Structure of writing code for version with graphic interface:
- 1. Interface part (JavaScript | OpenLayers3)
+ 1. Interface part (JavaScript | OpenLayers3 | HTML | CSS):
     * Making the html page with certain design and sizes
     * Using OpenLayers3 as a library for creating graphs 
     * Create empty sheet instead for the original map for recieving an ability to input the graph  
     * The complexity of creating graphical dynamic objects is assumed by OpenLayers3- JS library 
     * Creating the arrow and chosing the suitable design are our purposes 
     * Final unit of the interface part is making the adjacent matrix for transfering to the sever
- 2. Sever part (Python) 
+ 2. Sever part (Python): 
     *
     *
     *
     *
     
-##Links for better understanding algoritm and code:
+##Links for better understanding algorithm and code:
   * https://en.wikipedia.org/wiki/Kosaraju's_algorithm
   * http://lcm.csa.iisc.ernet.in/dsa/node171.html
   * https://www.youtube.com/watch?v=RpgcYiky7uw&t=1176s
