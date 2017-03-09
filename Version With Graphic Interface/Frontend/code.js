@@ -53,18 +53,19 @@ drawControl = new ol.interaction.Draw({
 	source: pointsSource,
 	type: (value),
 	stopEvent: false
-	
+
 });
 
 var counter=0;
-
+var pointsArr=[];
 
 drawControl.on('drawend', function(e) {
   e.feature.setProperties({
     'id': counter,
 	
   });
-
+  console.log(counter);
+  pointsArr.push(counter);
   counter=counter+1;
 });
 
@@ -141,7 +142,7 @@ var map = new ol.Map({
 });
 
 
-
+var matr=[];
 
 function makeLine(x1, y1, x2, y2, id1, id2) {
 	var points = [ [x1, y1], [x2, y2] ];
@@ -149,6 +150,7 @@ function makeLine(x1, y1, x2, y2, id1, id2) {
 		geometry: new ol.geom.LineString(points)
 	});
 	edgeVectorSource.addFeature(featureLine);	
+	matr[id1][id2]=1;
 }
 
 var flag=false;
@@ -201,9 +203,34 @@ button2.onclick = function() {
 	map.addInteraction(selectionControl);
 	flag=false;
 	
+	console.log(pointsArr);
+	
+	for (var i=0;i<pointsArr.length;i++) {
+		matr[i]=[];
+		for (var j=0;j<pointsArr.length; j++) {
+			matr[i][j]=0;
+		}
+	}
+	printM(matr);
+	
+};
+
+//actiave select
+var button3=document.getElementById('button3');
+button3.onclick = function() {
+	printM(matr);
 };
 
 map.on("pointermove", function (evt) {
 	var hit = evt.map.hasFeatureAtPixel(evt.pixel);
 	this.getTargetElement().style.cursor = hit ? 'pointer' : '';
 });
+
+function printM(tabInfos) {
+var i = 0;
+JSON.stringify(tabInfos, null, 2).split(/\n/).forEach(function(line) {
+  window.console && console.log(
+    (/\s{2}\S/.test(line)) ? i++ + line : line
+  );
+});
+}
