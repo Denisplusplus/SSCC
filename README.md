@@ -19,10 +19,10 @@
     * Using OpenLayers3 as a library for creating graphs 
     * Create empty sheet instead for the original map for recieving an ability to input the graph  
     * The complexity of creating graphical dynamic objects is assumed by OpenLayers3- JS library 
-    * Creating the arrow and chosing the suitable design are our purposes 
-    * Final unit of the interface part is making the adjacent matrix for transfering to the sever
- 2. Sever part (Python): 
-    *
+    * Creating the arrow and choosing the suitable design are our purposes 
+    * Final unit of the interface part is making the adjacent matrix for transfering to the server
+ 2. Server part (Python | Flask): 
+    * 
     *
     *
     *
