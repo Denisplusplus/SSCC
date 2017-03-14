@@ -1,4 +1,4 @@
-# Search for strong-connected components
+# Search for strongly-connected components
 
 ## Kosaraju's algorithm:
 1. Perform a DFS of G and number the vertices in order of completion of the recursive calls.
@@ -11,7 +11,7 @@
  * Loop in the deph for original graph with topologigal sorted output list
  * Reverse original graph
  * Loop in the deph for reversion graph in toplological sorted order
- * Output components from step (1.4)- strong-connected components  
+ * Output components from step (1.4)- strongly-connected components  
 
 ## Structure of writing code for version with graphic interface:
  1. Interface part (JavaScript | OpenLayers3 | HTML | CSS):
