@@ -28,11 +28,25 @@
      * cgi-bin/script.py/ -server part
      * when user clicks the "Run button", JavaScript part sends AJAX request with adjacent matrix in JSON format to the server and then receives the answer-list of strongly-connected components and alert it 
   
-  
-## Testing the app    
+## Testing the app:
+ For checking the correct working of our app we will use these pages with undeniable true examples:
+ * http://olymp.sch239.net/materials/lakhno_dfs.pdf
+ * http://www.geeksforgeeks.org/strongly-connected-components/
+ * http://atomlex.narod.ru/discret/examples.htm
+ 
+As practice shows, the application is working correctly
+
+## Screenshots
+![Image alt](https://github.com/Denisplusplus/SSCC/raw/master/img1.png)
+![Image alt](https://github.com/Denisplusplus/SSCC/raw/master/img2.png)
+![Image alt](https://github.com/Denisplusplus/SSCC/raw/master/img3.png)
+![Image alt](https://github.com/Denisplusplus/SSCC/raw/master/img4.png)
 ## Links for better understanding algorithm and code:
   * https://en.wikipedia.org/wiki/Kosaraju's_algorithm
   * http://lcm.csa.iisc.ernet.in/dsa/node171.html
   * https://www.youtube.com/watch?v=RpgcYiky7uw&t=1176s
   * https://www.python.org
+  * https://docs.python.org/2/library/cgi.html
   * https://openlayers.org/en/latest/doc/tutorials/
+  * https://www.w3schools.com/xml/ajax_intro.asp
+  * https://en.wikipedia.org/wiki/JSON
