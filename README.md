@@ -21,11 +21,15 @@
     * The complexity of creating graphical dynamic objects is assumed by OpenLayers3- JS library 
     * Creating the arrow and choosing the suitable design are our purposes 
     * Final unit of the interface part is making the adjacent matrix for transfering to the server
- 2. Server part (Python | Flask): 
-    * 
-    *
-    *
-    *
+  2. Server part (Python | CGI | Windows):
+     * ///App--->cgi-bin/script.py-----index.html-----code.js----style.css----start.py//  
+     * start.py for starting the web-server on localhost:8000
+     * index.html, code.js, style.css -frontend part
+     * cgi-bin/script.py/ -server part
+     * when user clicks the "Run button", JavaScript part sends AJAX request with adjacent matrix in JSON format to the server and then receives the answer-list of strongly-connected components and alert it 
+  
+  
+##Testing the app   
     
 ##Links for better understanding algorithm and code:
   * https://en.wikipedia.org/wiki/Kosaraju's_algorithm
