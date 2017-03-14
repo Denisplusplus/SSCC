@@ -49,11 +49,13 @@ var drawControl; // global so we can remove it later
 var value = "Point";
 
 
+//var geometryFunction, maxPoints;
 drawControl = new ol.interaction.Draw({
 	source: pointsSource,
 	type: (value),
 	stopEvent: false
-
+	//geometryFunction: geometryFunction,
+	//maxPoints: maxPoints
 });
 
 var counter=0;
@@ -64,7 +66,7 @@ drawControl.on('drawend', function(e) {
     'id': counter,
 	
   });
-  console.log(counter);
+  //console.log(counter);
   pointsArr.push(counter);
   counter=counter+1;
 });
@@ -203,7 +205,7 @@ button2.onclick = function() {
 	map.addInteraction(selectionControl);
 	flag=false;
 	
-	console.log(pointsArr);
+	//console.log(pointsArr);
 	
 	for (var i=0;i<pointsArr.length;i++) {
 		matr[i]=[];
@@ -211,14 +213,39 @@ button2.onclick = function() {
 			matr[i][j]=0;
 		}
 	}
-	printM(matr);
+	//printM(matr);
 	
 };
 
 //actiave select
 var button3=document.getElementById('button3');
 button3.onclick = function() {
-	printM(matr);
+	var k=0;
+	lin_matr=[];
+	for (var i=0; i<pointsArr.length;i++) {
+		for (var j=0;j<pointsArr.length;j++) {
+			lin_matr[k] = matr[i][j];
+			k++;
+		}	
+	}	
+	var data=lin_matr;
+	var object={"data":data}
+	var str=JSON.stringify(object);
+	console.log(str);
+
+	var html = $.ajax({
+		url: "/cgi-bin/script.py",
+		type:"GET",
+		cache:false,
+		async: false,
+		data: {'test': str }
+  
+	}).responseText;
+	alert(html);
+	console.log(html);
+	var object=$.parseJSON(html);
+	console.log(object);
+	console.log(object.data)	
 };
 
 map.on("pointermove", function (evt) {
@@ -226,11 +253,5 @@ map.on("pointermove", function (evt) {
 	this.getTargetElement().style.cursor = hit ? 'pointer' : '';
 });
 
-function printM(tabInfos) {
-var i = 0;
-JSON.stringify(tabInfos, null, 2).split(/\n/).forEach(function(line) {
-  window.console && console.log(
-    (/\s{2}\S/.test(line)) ? i++ + line : line
-  );
-});
-}
+
+
