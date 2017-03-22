@@ -37,10 +37,10 @@
 As practice shows, the application is working correctly
 
 ## Screenshots
-![Image alt](https://github.com/Denisplusplus/SSCC/raw/master/img1.png)
-![Image alt](https://github.com/Denisplusplus/SSCC/raw/master/img2.png)
-![Image alt](https://github.com/Denisplusplus/SSCC/raw/master/img3.png)
-![Image alt](https://github.com/Denisplusplus/SSCC/raw/master/img4.png)
+![Image alt](https://github.com/Denisplusplus/SSCC/raw/master/Others/1.png)
+![Image alt](https://github.com/Denisplusplus/SSCC/raw/master/Others/2.png)
+![Image alt](https://github.com/Denisplusplus/SSCC/raw/master/Others/3.png)
+![Image alt](https://github.com/Denisplusplus/SSCC/raw/master/Others/4.png)
 ## Links for better understanding algorithm and code:
   * https://en.wikipedia.org/wiki/Kosaraju's_algorithm
   * http://lcm.csa.iisc.ernet.in/dsa/node171.html
