@@ -11,19 +11,41 @@
 <link href="style.css" rel="stylesheet"> <!-- Here is a link for getting style -->
 </head>
 <body>
-<h1 align ="center"><font size="16">Search for strong-connected components</font></h1>
-<div>
+<h1 align ="left">Search for strongly-connected components</h1>
 
-		<table> 
+		<table>
 		<tr>
-		<td><div style="width:100%; height:100%" id="map"></div></td>
+			<th><div style="width:100%; height:100%" id="map"></div></th>
 		</tr>
 		</table>
-    
+		
+		<div style="position:absolute; left:1070px; top: 70px; width: 100%;">
+			<h1> How to use:  </h1>
+			<img src="https://neerc.ifmo.ru/wiki/images/thumb/9/9c/Components2.png/400px-Components2.png" width="200" height="100" alt="lorem">
+		</div>
+		
+		<div style="position:absolute; left:1000px; top: 250px; width: 100%;">
+			<p>This app searches for strongly-connected <br> components  in directed graph using <br> Kosaraju's algorithm</p>
+			<p><a href="https://github.com/Denisplusplus/SSCC">Click here</a> for to gain more information <br> about the app</p>
+		</div> 
+		
+		<div style="position:absolute; left:1120px; top: 380px; width: 100%;">
+			<h3> Controls:  </h3>
+		</div>
+		
+		<div style="position:absolute; left:980px; top: 430px; width: 100%;">
+		 <ol>
+			<li>Click "Vertex" to start setting the vertices </li>
+			<li>Click "Edge" to interconnect vertices </li>
+			<li>Click "Reload" if you have done the mistake</li>
+			<li>Click "Run" to launching the program</li>
+		<ol>
+		</div> 
+	
 		<br>
     <!-- Create the buttons for managing the app  -->
 		<button id="button1">
-		<font size="4">
+		<font size="5">
 			Vertex
 		</font>	
 		</button>
@@ -33,15 +55,23 @@
 			Edge
 		</font>
 		</button>
-    
+		
+		<button id="button4">
+		<font size="5">
+			Reload
+		</font>
+		</button>
+		
 		<button id="button3">
 		<font size="5">
 			Run
 		</font>
 		</button>
-    
+		
+		
+		
 	
-</div>
+
 <script src="code.js"></script> <!-- application logic -->
 </body>
 </html>
