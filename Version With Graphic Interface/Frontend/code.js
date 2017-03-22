@@ -247,6 +247,10 @@ button3.onclick = function() {
 	console.log(object);
 	console.log(object.data)	
 };
+var button4 = document.getElementById('button4');
+button4.onclick = function() {
+  location.reload();
+};
 
 map.on("pointermove", function (evt) {
 	var hit = evt.map.hasFeatureAtPixel(evt.pixel);
